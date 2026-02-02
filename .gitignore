@@ -1,0 +1,11 @@
+# Exclude zip files
+*.zip
+
+# Exclude markdown files
+*.md
+
+# macOS
+.DS_Store
+
+# Node modules (if any)
+node_modules/

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume Boost Pro</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Top Section: 2-Column Layout -->
+        <section class="top-section">
+            <!-- Left Column: Branding & Presets -->
+            <div class="left-column">
+                <header>
+                    <div class="logo-area">
+                        <img src="../../icons/icon48.png" alt="Logo" class="logo">
+                        <h1>Volume Boost Pro</h1>
+                    </div>
+                    <button id="themeToggle" class="icon-btn">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </header>
+
+                <!-- Preset Buttons -->
+                <div class="presets">
+                    <button class="preset-btn" data-mode="default">
+                        <span class="preset-icon">🎵</span>
+                        <span class="preset-name">Default</span>
+                    </button>
+                    <button class="preset-btn" data-mode="cinema">
+                        <span class="preset-icon">🎬</span>
+                        <span class="preset-name">Cinema</span>
+                    </button>
+                    <button class="preset-btn" data-mode="bass">
+                        <span class="preset-icon">🔥</span>
+                        <span class="preset-name">Bass</span>
+                    </button>
+                    <button class="preset-btn" data-mode="vocal">
+                        <span class="preset-icon">🎙️</span>
+                        <span class="preset-name">Vocal</span>
+                    </button>
+                </div>
+
+                <!-- Mute Button -->
+                <button id="muteBtn" class="mute-btn">
+                    <span class="mute-icon">🔊</span>
+                    <span>Sound On</span>
+                </button>
+            </div>
+
+            <!-- Right Column: Volume Knob -->
+            <div class="right-column">
+                <div class="knob-container" id="knobContainer">
+                    <div class="knob-glow"></div>
+                    <div class="knob-progress-bg"></div>
+                    <div class="knob-progress" id="knobProgress"></div>
+                    <div class="knob-inner">
+                        <span id="volumeValue" class="knob-value">100%</span>
+                        <span class="knob-label">Volume</span>
+                    </div>
+                </div>
+                <input type="range" id="volumeSlider" min="0" max="800" value="100" step="5" class="slider-hidden">
+            </div>
+        </section>
+
+        <main>
+            <!-- Visualizer -->
+            <section class="visualizer-section">
+                <div class="visualizer-container">
+                    <canvas id="visualizer"></canvas>
+                    <span class="visualizer-label">Audio Spectrum</span>
+                </div>
+            </section>
+
+            <!-- Tabs Playing Audio -->
+            <div class="tabs-control">
+                <h3>Tabs Playing Audio</h3>
+                <div id="tabsList" class="tabs-list">
+                    <div class="empty-state">No audio detected in other tabs.</div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <button id="resetBtn" class="secondary-btn">
+                <span>Reset to 100%</span>
+            </button>
+        </footer>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
