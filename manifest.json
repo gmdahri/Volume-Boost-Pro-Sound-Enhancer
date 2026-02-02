@@ -1,15 +1,12 @@
 {
   "manifest_version": 3,
   "name": "Volume Boost Pro: Sound Enhancer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Boost your volume up to 800% with Smart Gain control. Maximize audio & bass quality with visualizer and presets.",
   "permissions": [
     "scripting",
     "activeTab",
     "storage"
-  ],
-  "host_permissions": [
-    "<all_urls>"
   ],
   "action": {
     "default_popup": "src/popup/popup.html",
